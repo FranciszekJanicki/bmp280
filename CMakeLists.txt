@@ -5,9 +5,7 @@ target_sources(bmp280 PRIVATE
 )
 
 target_include_directories(bmp280 PUBLIC
-)
-
-target_link_libraries(bmp280 PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(bmp280 PUBLIC
