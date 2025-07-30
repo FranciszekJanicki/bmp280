@@ -4,6 +4,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define BMP280_MEASURING (1 << 3)
 #define BMP280_DEVICE_ID 0x75U
 
@@ -113,5 +117,9 @@ typedef struct {
     bmp280_err_t (*bus_write_data)(void*, uint8_t, uint8_t const*, size_t);
     bmp280_err_t (*bus_read_data)(void*, uint8_t, uint8_t*, size_t);
 } bmp280_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMP280_BMP280_CONFIG_H

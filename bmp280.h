@@ -4,6 +4,10 @@
 #include "bmp280_config.h"
 #include "bmp280_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     bmp280_config_t config;
     bmp280_interface_t interface;
@@ -62,5 +66,9 @@ bmp280_err_t bmp280_get_temp_reg(bmp280_t const* bmp280,
 
 bmp280_err_t bmp280_get_temp_x_reg(bmp280_t const* bmp280,
                                    bmp280_temp_x_reg_t* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMP280_BMP280_H

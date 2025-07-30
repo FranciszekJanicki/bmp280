@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint16_t calibration_data : 16;
 } bmp280_calib_reg_t;
@@ -47,5 +51,9 @@ typedef struct {
 typedef struct {
     uint8_t temp_x : 4;
 } bmp280_temp_x_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMP280_BMP280_REGISTERS_H
